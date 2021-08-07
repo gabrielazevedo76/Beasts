@@ -5,7 +5,7 @@ const modalContent = document.querySelector(".modal-content")
 
 wildImagesOpen.forEach(img => {
     img.addEventListener("click", () => {
-        
+        img.classList.add()
     })
 })
 
