@@ -15,6 +15,7 @@ body {
 
 header {
     display: flex;
+    flex-wrap: wrap;
     position: fixed;
     width: 100%;
     top: 0;
@@ -136,8 +137,8 @@ footer li:first-child {
 main {
     display: grid;
     margin: 0 10%;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 #animals__fox {
@@ -145,16 +146,16 @@ main {
 }
 
 .animal__name span{
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
 }
 
 .animal__name img {
+    max-width: 100%;
     width: 500px;
-    min-width: 250px;
-    height: 400px;
+    height: 500px;
     border-radius: 5px;
     object-fit: cover;
 }
@@ -203,7 +204,6 @@ main {
     margin-top: 40px;
     width: 1000px;
     height: 200px;
-    grid-column:1 / span 4;
     justify-self: center;
     object-fit: cover;
     border-radius: 5px;
@@ -220,20 +220,9 @@ main {
     justify-self: end;
 }
 
-#animals__wolf {
-    grid-column: 1;
-    grid-row: 5;
-}
-
-#animals__wolf_about {
-    grid-column: 2;
-    grid-row: 5;
-}
 
 .animal__divider_2 {
     margin-top: 40px;
-    grid-column: 3;
-    grid-row: 5 / span 6;
     width: 300px;
     height: 70%;
     justify-self: end;
@@ -256,15 +245,7 @@ main {
 
 
 
-#animals__bear {
-    grid-column: 1;
-    grid-row: 6;
-}
 
-#animals__bear_about {
-    grid-column: 2;
-    grid-row: 6;
-}
 /* MODAL */
 
 .modal-overlay {
@@ -315,4 +296,10 @@ main {
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 1rem;
     }
-  }
+
+    main {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 1rem;
+    }
+}
+
